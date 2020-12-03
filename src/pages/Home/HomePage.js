@@ -1,7 +1,7 @@
 import React from 'react';
 // import TopMenuHeader from '../../components/Home/TopMenuHeader'
 import { Row, Col, Carousel, Tabs, Image, Menu } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import { HomeOutlined, ShopOutlined, SettingOutlined, ContactsOutlined } from '@ant-design/icons';
 import flashSale from '../../assets/images/flash-sale.jpg'
 
 import '../../assets/css/Home/HomePage.scss'
@@ -18,30 +18,16 @@ const contentStyle = {
 };
 
 const HomePage = () => {
-    return (
-        <div id='home-page'>           
-            <Carousel autoplay>
-                <div>
-                    <h3 style={contentStyle}>1</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>2</h3>
-                </div>                                        
-                <div>
-                    <h3 style={contentStyle}>3</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>4</h3>
-                </div>                                        
-            </Carousel>   
-            <Menu mode="horizontal" style={{marginBottom: '1.5vh'}}>
-                <Menu.Item key="mail" icon={<MailOutlined />}>
+    return (        
+        <div id='home-page'>     
+            <Menu mode="horizontal" style={{marginBottom: '0.1vh'}} theme="dark">
+                <Menu.Item key="home" icon={<HomeOutlined />}>
                     Trang Chủ
                 </Menu.Item>
-                <Menu.Item key="app" icon={<AppstoreOutlined />}>
+                <Menu.Item key="app" icon={<ContactsOutlined />}>
                     Liên Hệ
                 </Menu.Item>
-                <Menu.Item key="app1" icon={<AppstoreOutlined />}>
+                <Menu.Item key="app1" icon={<ShopOutlined />}>
                     Sản Phẩm
                 </Menu.Item>
                 <SubMenu
@@ -58,7 +44,21 @@ const HomePage = () => {
                         <Menu.Item key="setting:4">Option 4</Menu.Item>
                     </Menu.ItemGroup>
                 </SubMenu>
-            </Menu>                  
+            </Menu>               
+            <Carousel autoplay>
+                <div>
+                    <h3 style={contentStyle}>1</h3>
+                </div>
+                <div>
+                    <h3 style={contentStyle}>2</h3>
+                </div>                                        
+                <div>
+                    <h3 style={contentStyle}>3</h3>
+                </div>
+                <div>
+                    <h3 style={contentStyle}>4</h3>
+                </div>                                        
+            </Carousel>                    
             <Row>
                 <Col span={6}>
                     <Image
