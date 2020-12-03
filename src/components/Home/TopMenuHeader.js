@@ -15,6 +15,8 @@ const menu = (
     </Menu>
 );
 
+
+
 const TopMenuHeader = () => {
     return (
         <div className='top-menu-header'>
@@ -30,6 +32,9 @@ const TopMenuHeader = () => {
                 <Button>
                     <ShoppingCartOutlined />
                 </Button>
+            </div>
+            <div className='top-menu-header-slider'>
+
             </div>
         </div>
     );
