@@ -1,21 +1,14 @@
 import React from 'react';
-import { Row, Col, Tabs, Card, Image, Rate, Typography, BackTop, Input } from 'antd';
+import { Row, Col, BackTop, Input } from 'antd';
 import SearchOutlined from '@ant-design/icons';
 
 import AppMenu from '../../components/Common/AppMenu'
+import AppFooter from '../../components/Common/AppFooter'
 import HomeSlider from '../../components/Home/HomeSlider'
+import HomeTabsItems from '../../components/Home/HomeTabsItems'
 import '../../assets/css/Home/HomePage.scss'
 
-import ImgBookDemo from '../../assets/images/harry-potter-1.jpg'
-
-const { TabPane } = Tabs;
-const { Text, Link } = Typography;
 const { Search } = Input;
-
-const test = {
-    marginRight: '1%',
-    width: '19%'
-}
 
 const HomePage = () => {
     return (        
@@ -33,209 +26,16 @@ const HomePage = () => {
             </Row>
             <Row style={{marginTop: '1vh'}}>
                 <Col span={24}>
-                    <Tabs type="card" style={{marginLeft: '5px'}}>
-                        <TabPane tab="Best Seller" key="1"> 
-                            <Row>
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                        <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>    
-                            </Row>       
-                        </TabPane>
-                        <TabPane tab="Sách Tiếng Việt" key="2"> 
-                            <Row>
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>    
-                            </Row>       
-                        </TabPane>
-                        <TabPane tab="Sách Ngoại Văn" key="3"> 
-                            <Row>
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>    
-                            </Row>       
-                        </TabPane>
-                        <TabPane tab="Tiểu Thuyết" key="4"> 
-                            <Row>
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>   
-                                <Card style={test}>
-                                    <Image src={ImgBookDemo} alt='book-image'/>
-                                    <Rate disabled allowHalf defaultValue={4.5} />
-                                    <Link style={{display: 'block', fontSize: '16px'}}>Harry Potter và hòn đá phù thủy</Link>
-                                    <p>
-                                        <span style={{fontSize: '18px', fontWeight: '600'}}>108.000 ₫</span>
-                                         <Text disabled delete style={{marginLeft: '5px'}}>41.000 ₫</Text>
-                                    </p>
-                                </Card>    
-                            </Row>       
-                        </TabPane>
-                    </Tabs>
+                    <HomeTabsItems/>
                 </Col>
             </Row> 
-            <Row>
-                <div style={{width: '100%', height: '5vh', background: '#001529'}}></div>
-            </Row> 
+            {/* <Row style={{height: '5vh', background: '#ecf0f1'}}>
+                <Col span={6}>a<Divider type="vertical" /></Col>
+                <Col span={6}>b<Divider type="vertical" /></Col>
+                <Col span={6}>c<Divider type="vertical" /></Col>
+                <Col span={6}>d</Col>
+            </Row>  */}
+            <AppFooter/>
             <BackTop />           
         </div>
     );
