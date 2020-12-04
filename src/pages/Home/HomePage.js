@@ -28,13 +28,7 @@ const HomePage = () => {
                 <Col span={24}>
                     <HomeTabsItems/>
                 </Col>
-            </Row> 
-            {/* <Row style={{height: '5vh', background: '#ecf0f1'}}>
-                <Col span={6}>a<Divider type="vertical" /></Col>
-                <Col span={6}>b<Divider type="vertical" /></Col>
-                <Col span={6}>c<Divider type="vertical" /></Col>
-                <Col span={6}>d</Col>
-            </Row>  */}
+            </Row>
             <AppFooter/>
             <BackTop />           
         </div>
