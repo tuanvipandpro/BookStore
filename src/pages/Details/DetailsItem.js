@@ -1,5 +1,5 @@
-import React from 'react';
-import { Row, Col, BackTop, Card, Image, Typography, Rate, InputNumber, Button, Comment } from 'antd';
+import {React, useState} from 'react';
+import { Row, Col, BackTop, Card, Image, Typography, Rate, InputNumber, Button, Comment, Spin } from 'antd';
 
 import AppMenu from '../../components/Common/AppMenu'
 import AppFooter from '../../components/Common/AppFooter'
@@ -15,8 +15,11 @@ const ButtonStyle = {
 
 
 const DetailsPage = () => {
-    return (        
-        <div id='home-page'>
+    const [loading = true, setLoading] = useState()
+
+    return (      
+        <Spin tip="Loading..." spinning={loading}>
+        <div id='details-page'>
             <Row>
                 <Col span={24}><AppMenu/></Col>
             </Row>
@@ -71,8 +74,9 @@ const DetailsPage = () => {
                 </Col>
             </Row>            
             <AppFooter/>
-            <BackTop />           
+            <BackTop />       
         </div>
+        </Spin>
     );
 }
 
