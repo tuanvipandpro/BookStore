@@ -1,18 +1,26 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { Menu } from 'antd';
 import { HomeOutlined, ShopOutlined, SettingOutlined, ContactsOutlined } from '@ant-design/icons';
+import { Redirect } from "react-router-dom";
 const { SubMenu } = Menu;
 
 const AppMenu = () => {
+    const [redirect, setRedirect] = useState()
+
+    // Transit To
+    if (redirect) {
+        return <Redirect to={redirect}/>
+    }
+
     return (
-        <Menu mode="horizontal" theme="dark">
+        <Menu mode="horizontal" theme="dark" onClick={() => setRedirect('/')}>
             <Menu.Item key="home" icon={<HomeOutlined />}>
                 Trang Chủ
             </Menu.Item>
-            <Menu.Item key="app" icon={<ContactsOutlined />}>
+            <Menu.Item key="contact" icon={<ContactsOutlined />}>
                 Liên Hệ
             </Menu.Item>
-            <Menu.Item key="app1" icon={<ShopOutlined />}>
+            <Menu.Item key="product" icon={<ShopOutlined />}>
                 Sản Phẩm
             </Menu.Item>
             <SubMenu

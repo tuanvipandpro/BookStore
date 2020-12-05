@@ -1,6 +1,8 @@
-import {React, useState} from 'react';
-import { Row, Col, BackTop, Card, Image, Typography, Rate, InputNumber, Button, Comment, Spin } from 'antd';
-
+// import {React, useState} from 'react';
+import {React} from 'react';
+import { Row, Col, BackTop, Card, Image, Typography, Rate, InputNumber, Button, Comment, Avatar, Spin, Tooltip } from 'antd';
+import { DislikeFilled, LikeFilled } from '@ant-design/icons';
+import moment from 'moment';
 import AppMenu from '../../components/Common/AppMenu'
 import AppFooter from '../../components/Common/AppFooter'
 import '../../assets/css/Home/HomePage.scss'
@@ -13,12 +15,27 @@ const ButtonStyle = {
     fontSize: '16px'
 }
 
+const actions = [
+    <Tooltip key="comment-basic-like" title="Like">
+      <span>
+        <LikeFilled/>
+        <span className="comment-action">Like</span>
+      </span>
+    </Tooltip>,
+    <Tooltip key="comment-basic-dislike" title="Dislike">
+      <span>
+        <DislikeFilled/>
+        <span className="comment-action">DisLike</span>
+      </span>
+    </Tooltip>
+  ];
+
 
 const DetailsPage = () => {
-    const [loading = true, setLoading] = useState()
+    // const [loading = false, setLoading] = useState()
 
     return (      
-        <Spin tip="Loading..." spinning={loading}>
+        <Spin tip="Loading..." spinning={false}>
         <div id='details-page'>
             <Row>
                 <Col span={24}><AppMenu/></Col>
@@ -69,7 +86,42 @@ const DetailsPage = () => {
             <Row style={{marginTop: '1vh'}}>
                 <Col span={24}>
                     <Card>
-                        Comment
+                        <Comment
+                            actions={actions}
+                            author='TuanLM'
+                            avatar={
+                                <Avatar
+                                  src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                                  alt="Han Solo"
+                                />
+                            }
+                            content={
+                                'Sản phẩm tốt'
+                            }  
+                            datetime={
+                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                                    <span>{moment().fromNow()}</span>
+                                </Tooltip>                                
+                            }                        
+                        />
+                        <Comment
+                            actions={actions}
+                            author='TuanLM'
+                            avatar={
+                                <Avatar
+                                  src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                                  alt="Han Solo"
+                                />
+                            }
+                            content={
+                                'Sản phẩm tốt'
+                            }  
+                            datetime={
+                                <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                                    <span>{moment().fromNow()}</span>
+                                </Tooltip>                                
+                            }                        
+                        />
                     </Card>
                 </Col>
             </Row>            
